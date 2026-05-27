@@ -32,9 +32,7 @@ export function Navbar() {
     setMobileOpen(false);
     const el = document.querySelector(href);
     if (el) {
-      const topOffset = 88;
-      const y = window.scrollY + (el as HTMLElement).getBoundingClientRect().top - topOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+      (el as HTMLElement).scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
