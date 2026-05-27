@@ -29,11 +29,12 @@ export function Navbar() {
   const isDark = theme === "dark";
 
   const handleNavClick = (href: string) => {
-    setMobileOpen(false);
-    const el = document.querySelector(href);
+    const id = href.startsWith("#") ? href.substring(1) : href;
+    const el = document.getElementById(id);
     if (el) {
-      (el as HTMLElement).scrollIntoView({ behavior: "smooth", block: "start" });
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+    setMobileOpen(false);
   };
 
   return (
