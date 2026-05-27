@@ -75,7 +75,7 @@ export function Hero() {
       {/* Hero image (background) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.img
-          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxBSSUyMGFydGlmaWNpYWwlMjBpbnRlbGxpZ2VuY2UlMjB0ZWNobm9sb2d5JTIwZnV0dXJpc3RpY3xlbnwxfHx8fDE3Nzk3MDkxMjl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="src\app\components\figma\CV_2026-05-27_ANDRE ECLESIASTE_AKA.pdf"
           alt="AI technology"
           initial={{ opacity: 0 }}
           animate={{ opacity: isDark ? 0.05 : 0.04 }}
@@ -189,7 +189,7 @@ export function Hero() {
                 <ArrowRight size={16} />
               </motion.a>
               <motion.a
-                href="https://github.com/akaandre53-ctrl/andre-aka/raw/main/src/app/components/figma/CV_2026-05-27_ANDRE%20ECLESIASTE_AKA.pdf"
+                href="https://github.com/akaandre53-ctrl/andre-aka/blob/main/src/app/components/figma/CV_2026-05-27_ANDRE%20ECLESIASTE_AKA.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.03 }}
