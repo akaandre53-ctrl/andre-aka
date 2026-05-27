@@ -189,7 +189,9 @@ export function Hero() {
                 <ArrowRight size={16} />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://github.com/akaandre53-ctrl/andre-aka/raw/main/src/app/components/figma/CV_2026-05-27_ANDRE%20ECLESIASTE_AKA.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium border text-sm transition-all ${
