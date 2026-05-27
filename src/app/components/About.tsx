@@ -11,6 +11,8 @@ const passions = [
   { Icon: Lightbulb, label: { fr: "Entrepreneuriat", en: "Entrepreneurship" } },
 ];
 
+const aboutPhotoUrl = new URL("./figma/im1.jpg", import.meta.url).href;
+
 function SectionHeader({ title, subtitle, isDark }: { title: string; subtitle: string; isDark: boolean }) {
   return (
     <motion.div
@@ -48,7 +50,7 @@ export function About() {
             <div className="flex flex-col items-center text-center gap-6">
               <img
                 id="aboutPhoto"
-                src="src/app/components/figma/im1.jpg"
+                src={aboutPhotoUrl}
                 className="w-72 h-72 sm:w-80 sm:h-80 rounded-full object-cover border-2 border-blue-500 shadow-xl"
                 alt="André Eclésiaste Aka"
               />

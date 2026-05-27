@@ -25,6 +25,8 @@ const stats = [
   { value: "3+", key: "hero.stats.years" },
 ];
 
+const heroAvatarUrl = new URL("./figma/im2.jpg", import.meta.url).href;
+
 export function Hero() {
   const { t, theme } = usePortfolio();
   const isDark = theme === "dark";
@@ -220,7 +222,7 @@ export function Hero() {
                     : "bg-gradient-to-br from-blue-50 to-slate-100"
                 }`}>
                   <img
-                    src="src\app\components\figma\im2.jpg"
+                    src={heroAvatarUrl}
                     alt="André Eclésiaste Aka"
                     className="w-full h-full object-cover"
                   />
