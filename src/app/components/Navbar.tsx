@@ -28,13 +28,19 @@ export function Navbar() {
 
   const isDark = theme === "dark";
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (href: string, closeOverlay = true) => {
     const id = href.startsWith("#") ? href.substring(1) : href;
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (closeOverlay) {
+      // Close the mobile menu first so the page layout isn't blocked by the overlay,
+      // then scroll after the collapse animation completes.
+      setMobileOpen(false);
+      setTimeout(() => {
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 220);
+    } else {
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    setMobileOpen(false);
   };
 
   return (
@@ -53,9 +59,9 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <motion.a
+            <motion.a
             href="#home"
-            onClick={(e) => { e.preventDefault(); handleNavClick("#home"); }}
+            onClick={(e) => { e.preventDefault(); handleNavClick("#home", false); }}
             whileHover={{ scale: 1.02 }}
             className="flex items-center gap-2"
           >
@@ -73,7 +79,7 @@ export function Navbar() {
               <a
                 key={key}
                 href={href}
-                onClick={(e) => { e.preventDefault(); handleNavClick(href); }}
+                onClick={(e) => { e.preventDefault(); handleNavClick(href, false); }}
                 className={`px-3 py-1.5 rounded-lg text-sm transition-all duration-200 ${
                   isDark
                     ? "text-slate-300 hover:text-white hover:bg-slate-800"
@@ -142,7 +148,7 @@ export function Navbar() {
                 <a
                   key={key}
                   href={href}
-                  onClick={(e) => { e.preventDefault(); handleNavClick(href); }}
+                  onClick={(e) => { e.preventDefault(); handleNavClick(href, true); }}
                   className={`block px-3 py-2 rounded-lg text-sm transition-colors ${
                     isDark
                       ? "text-slate-300 hover:text-white hover:bg-slate-800"
