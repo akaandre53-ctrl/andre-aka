@@ -24,7 +24,8 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: process.env.NODE_ENV === 'production' ? '/andre-aka/' : '/',
+  // Use VITE_BASE when deploying to GitHub Pages; default to root for platforms like Vercel.
+  base: process.env.VITE_BASE || '/',
   resolve: {
     alias: {
       // Alias @ to the src directory
