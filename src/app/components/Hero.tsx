@@ -19,7 +19,7 @@ const floatingIcons = [
 ];
 
 const stats = [
-  { value: "2+", key: "hero.stats.projects" },
+  { value: "5+", key: "hero.stats.projects" },
   { value: "10+", key: "hero.stats.tech" },
   { value: "5+", key: "hero.stats.certs" },
   { value: "3+", key: "hero.stats.years" },
