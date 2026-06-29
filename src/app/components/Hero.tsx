@@ -75,7 +75,7 @@ export function Hero() {
       {/* Hero image (background) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.img
-          src="src\app\components\figma\CV_2026-05-27_ANDRE ECLESIASTE_AKA.pdf"
+          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxBSSUyMGFydGlmaWNpYWwlMjBpbnRlbGxpZ2VuY2UlMjB0ZWNobm9sb2d5JTIwZnV0dXJpc3RpY3xlbnwxfHx8fDE3Nzk3MDkxMjl8MA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="AI technology"
           initial={{ opacity: 0 }}
           animate={{ opacity: isDark ? 0.05 : 0.04 }}
